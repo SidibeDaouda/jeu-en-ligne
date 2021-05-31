@@ -1,0 +1,16 @@
+include includes/head.pug
+script.
+  window.lesScores = !{JSON.stringify(lesScores)}
+  window.meilleurScore = !{JSON.stringify(meilleurScore)}
+body
+
+  include includes/header.pug
+
+  section.hero.is-primary
+    .title.has-text-white
+    .hero-body.formScore
+      #lesScores
+
+  script(src='/js/score.js')
+
+  include includes/footer.pug

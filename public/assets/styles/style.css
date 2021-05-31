@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(171, 100%, 41%);
+  position: relative;
+}
+/* 
+.navbar-brand a {
+  background-size: 90%;
+  width: 152px;
+} */
+.hero-body {
+  height: 85vh;
+}
+
+.navbar-item {
+  margin-top: 5px;
+}
+
+.hero-body.accueil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-body.formulaire {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+}
+.hero-body.formSalon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.accueilImage {
+  min-width: 550px;
+  min-height: 350px;
+  max-width: 550px;
+  max-height: 350px;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.footer .container .content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.monContenu {
+  width: 400px;
+}
+
+.nomCapital {
+  text-transform: capitalize;
+}
+
+.cacher {
+  display: none;
+}
+
+nav.tabs.is-boxed .container ul li.tab.tabMobile {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  nav.tabs.is-boxed .container ul li.tab.tabMobile {
+    display: flex;
+  }
+
+  #discussion.content-tab .columns .column.is-2 {
+    display: none;
+  }
+
+  .box.container {
+    height: 100%;
+  }
+}
+
+/* sroll */
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+  /* border-radius: 10px; */
+  background-color: #00d1b2;
+}
+
+#listeUtilisateurs,
+#listeUsersMobile {
+  height: 400px;
+  padding: 10px 20px;
+  overflow: auto;
+}
+
+/* Chatbox - discussion */
+.chatBox {
+  background: no-repeat url('/images/imgBgChat.jpg');
+  background-size: cover;
+  height: 420px;
+  padding: 3% 0;
+  overflow: auto;
+  flex: auto;
+}
+
+.messageBox {
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.messageText {
+  width: 100%;
+  letter-spacing: 0;
+  float: left;
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+.messageContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5%;
+  margin-top: 3px;
+}
+
+.infosMessages {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.3px;
+  font-size: 0.85em;
+  font-weight: 900;
+  color: black;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+.justifyEnd {
+  justify-content: flex-end;
+}
+.backgroundSecondary {
+  background: #b4b4b4;
+}
+
+.backgroundPrimary {
+  background: #00d1b2;
+}
+
+/* Partie - lacement d'une partie */
+#partie.content-tab {
+  height: 460px;
+  padding: 10px;
+}
+
+.partieDisponible {
+  width: 100%;
+  height: 350px;
+  padding: 5px 20px;
+  background-color: #ebebeba1;
+  overflow: auto;
+  text-align: center;
+}
+
+.hero-body.formSalon .columns .card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formScore {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  margin-top: -50px;
+  /* height: 400px; */
+  /* overflow: auto; */
+}
+
+#lesScores {
+  height: 500px;
+  padding: 5px;
+  flex: auto;
+  overflow: auto;
+}
+
+.cardScoreWidth {
+  width: 550px;
+}
+
+.title.has-text-white {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.lienSalon {
+  font-weight: bold;
+  /* color: #00d1b2; */
+}

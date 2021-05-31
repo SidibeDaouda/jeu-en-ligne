@@ -1,0 +1,30 @@
+//- utilisateur pug dans un zutre fichier js !{}
+include includes/head.pug
+script.
+  window.salons = !{JSON.stringify(salons)}
+  window.nomUtilisateur = !{JSON.stringify(utilisateur.nomUtilisateur)}
+body
+  include includes/header.pug
+  section.hero.is-primary
+    .hero-body.formSalon
+      .columns
+        .card
+          .card-header
+            p.card-header-title.is-centered Discussion & jeu       
+          .card-content            
+            .content.monContenu
+              .partieDisponible
+            form.lancerJeuForm(action="/salon/salonDeJeu/room" method="POST")
+              .field.has-addons.has-addons-centered
+                input.gameRoom(type="hidden" name="room" id="room")
+                p.control
+                  button.button.is-primary.is-outlined.is-light Lancer une partie
+            br
+            form.lancerDiscussion(action="/salon/discussion&jeu")
+                input(type="hidden" name="nomUtilisateur" value=utilisateur.nomUtilisateur)
+                input(type="hidden" name="room" value="discutionGénérale")
+                button.button.is-primary Salon de discussion générale
+  
+  script(type='text/javascript' src='/socket.io/socket.io.js')
+  script(src='/js/salonClient.js')
+  include includes/footer.pug

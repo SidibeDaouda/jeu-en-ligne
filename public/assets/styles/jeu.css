@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  /* background-color: #111; */
+}
+.cacher {
+  display: none;
+}
+
+#chargement {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#chargement .bar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  display: inline-block;
+  animation: chargement 2s ease-in-out infinite;
+  -webkit-animation: chargement 2s ease-in-out infinite;
+}
+
+#chargement .bar1 {
+  animation-delay: 0.1s;
+}
+
+#chargement .bar2 {
+  animation-delay: 0.2s;
+}
+
+#chargement .bar3 {
+  animation-delay: 0.3s;
+}
+
+#chargement .bar4 {
+  animation-delay: 0.4s;
+}
+
+#chargement .bar5 {
+  animation-delay: 0.5s;
+}
+
+#chargement .bar6 {
+  animation-delay: 0.6s;
+}
+
+#chargement .bar7 {
+  animation-delay: 0.7s;
+}
+
+#chargement .bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes chargement {
+  0% {
+    transform: scaleY(1);
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  }
+
+  20% {
+    transform: scaleY(0);
+    background: 0 0;
+  }
+
+  100% {
+    transform: scaleY(1);
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  }
+}
+
+#airDeJeu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: none;
+}
+
+#airDeJeu #gameCanvas {
+  width: 100%;
+  height: 100%;
+  background-image: url(../tilesets/bg10.png);
+  background-size: 100% 100%;
+}
+
+#airDeJeu .menu {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 30%;
+  top: 25%;
+  width: 40%;
+  height: 50%;
+  border-radius: 10%;
+  border: 1vh solid #fff;
+  text-align: center;
+  color: #fff;
+}
+
+#airDeJeu .menu .button {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  padding: 1vh 4vh;
+  font-size: 2.5vh;
+  border-radius: 1vh;
+  text-decoration: none;
+  outline: 0;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-bottom: 0.6vh solid #2980b9;
+  cursor: pointer;
+}
+
+#airDeJeu .menu .button:active {
+  transform: translate(-50%, -50%);
+  border-bottom: none;
+}
+
+#airDeJeu #finPartie {
+  display: none;
+}

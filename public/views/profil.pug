@@ -1,0 +1,26 @@
+include includes/head.pug
+
+body
+
+  include includes/header.pug
+
+  section.hero.is-primary
+    .hero-body
+       section.hero.is-primary
+        .hero-body.formSalon
+          .card
+            header.card-header
+              p.card-header-title Modifier vos informations
+            .card-content
+              .content
+                include ./includes/messages.pug
+                form.form(action="/utilisateur/editer-profil" method="post" autocomplete="off")
+                  input.input(type="hidden" id="idUtilisateur"  name="idUtilisateur" value=`${utilisateur.id}`)
+                  label.label(for="nouveauNomUtilisateur") Nom d'utilisateur
+                    input.input(type="text" id="nouveauNomUtilisateur"  name="nouveauNomUtilisateur" value=`${utilisateur.nomUtilisateur}`)
+                  .field
+                    .buttons.is-centered
+                      button.button.is-primary Modifier
+
+
+  include includes/footer.pug

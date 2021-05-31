@@ -1,0 +1,39 @@
+include includes/head.pug
+link(rel='stylesheet' href='/styles/jeu.css')
+script.
+  window.nomUtilisateur = !{JSON.stringify(utilisateur.nomUtilisateur)}
+body
+  include includes/header.pug
+  section.hero.is-primary
+    #chargement
+      .bar.bar1
+      .bar.bar2
+      .bar.bar3
+      .bar.bar4
+      .bar.bar5
+      .bar.bar6
+      .bar.bar7
+      .bar.bar8
+    #airDeJeu
+      #menuDepart.menu
+        p nom salon #{nomDuSalon}
+        h1.title Eviter les pointes
+        p.subtitle Utiliser les flèches ← → pour vous déplacer
+        p.nbJoueur
+        button#btnDepart.button.cacher PLAY
+      canvas#gameCanvas
+      #finPartie.menu
+        h1 Partie terminé
+        p#resultat
+        p#monScore
+        p#autreScore
+        button#terminer.button Terminer
+        
+  script(type='text/javascript' src='/socket.io/socket.io.js')
+  //- script(src='/js/classes/Pointe.js')
+  //- script(src='/js/classes/Fragment.js')
+  script(src='/js/classes/Etoile.js')
+  script(src='/js/classes/Joueur.js')
+  script(src='/js/jeuClient.js')
+
+  include includes/footer.pug

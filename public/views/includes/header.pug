@@ -1,0 +1,42 @@
+nav.navbar
+  .navbar-brand
+    a(href='/')
+      img(src='/images/M&L.jpg')
+    .navbar-burger.burger(data-target='navMenubd')
+      span
+      span
+      span
+  #navMenubd.navbar-menu
+    .navbar-start
+      if utilisateur
+        .navbar-item
+          a.navbar-item(href='/salon') Salon
+        .navbar-item
+          a.navbar-item(href='/stats') Stats de jeu
+        //- .navbar-item
+        //-   a.navbar-item(href='#') Notification
+    .navbar-end
+      .navbar-item
+        .field.is-grouped
+          if !utilisateur 
+            p.control
+              a.button.is-info(href="/connexion")
+                span.icon
+                  i.fas.fa-sign-in-alt
+                span Connexion
+            p.control
+              a.button.is-primary(href='/inscription')
+                span.icon
+                  i.fas.fa-user-plus
+                span Inscription
+          else
+            p.control
+              a.button(href="/profil")
+                span.icon
+                  i.fas.fa-user-circle
+                span Profil
+            p.control
+              a.button.is-primary(href='/utilisateur/deconnexion')
+                span.icon
+                  i.fas.fa-sign-out-alt
+                span Déconnexion
