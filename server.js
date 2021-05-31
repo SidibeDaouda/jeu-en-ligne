@@ -91,7 +91,7 @@ const connectionOptions = {
 
 const connectDB = async () => {
   await mongoose
-    .connect(process.env.MONGO_URI, connectionOptions)
+    .connect(process.env.MONGODB_URI, connectionOptions)
     .then(() => {
       console.log('Connecté à MongoDB avec succèss :)')
       server.listen(PORT, () => {
