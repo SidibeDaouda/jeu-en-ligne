@@ -12,9 +12,11 @@ const app = express()
 // const morgan = require('morgan')
 require('dotenv').config()
 
+app.use(cors())
+
 // Dev Logginf Middleware
 if (process.env.NODE_ENV === 'development') {
-  app.use(cors())
+  // app.use(cors())
   // app.use(morgan('dev'))
 }
 
