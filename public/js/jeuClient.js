@@ -3,8 +3,12 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-use-before-define */
-const salonClient = io.connect(window.location.hostname)
-const jeuClient = io.connect(`${window.location.hostname}/jeu`)
+const salonClient = io(window.location.hostname, {
+  transports: ['websocket'],
+})
+const jeuClient = io(`${window.location.hostname}/jeu`, {
+  transports: ['websocket'],
+})
 const room = window.location.pathname.split('/').pop()
 const chargement = document.getElementById('chargement')
 const airDeJeu = document.getElementById('airDeJeu')

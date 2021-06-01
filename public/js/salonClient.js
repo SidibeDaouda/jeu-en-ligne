@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
-const salonClient = io.connect(window.location.hostname)
+const salonClient = io(window.location.hostname, {
+  transports: ['websocket'],
+})
 const roomName = 'salonGeneral'
 const partieDisponible = document.querySelector('.partieDisponible')
 const lancerJeuForm = document.querySelector('.lancerJeuForm')

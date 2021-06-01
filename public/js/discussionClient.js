@@ -4,7 +4,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 
-const discussionClient = io.connect(`${window.location.hostname}/discussion`)
+const discussionClient = io(`${window.location.hostname}/discussion`, {
+  transports: ['websocket'],
+})
 // const jeuClient = io('http://localhost:5000/jeu')
 
 const { nomUtilisateur, room } = Qs.parse(location.search, {
