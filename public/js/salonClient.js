@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const salonClient = io()
+const salonClient = io.connect(window.location.hostname)
 const roomName = 'salonGeneral'
 const partieDisponible = document.querySelector('.partieDisponible')
 const lancerJeuForm = document.querySelector('.lancerJeuForm')
