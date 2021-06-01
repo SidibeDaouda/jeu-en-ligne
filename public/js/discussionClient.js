@@ -4,7 +4,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 
-const discussionClient = io('http://localhost:5000/discussion')
+const discussionClient = io('/discussion')
 // const jeuClient = io('http://localhost:5000/jeu')
 
 const { nomUtilisateur, room } = Qs.parse(location.search, {

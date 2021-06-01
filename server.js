@@ -16,16 +16,14 @@ app.use(cors())
 
 // Dev Logginf Middleware
 if (process.env.NODE_ENV === 'development') {
-  // app.use(cors())
   // app.use(morgan('dev'))
 }
 
 // ajout de socket.io
-const server = require('http').Server(app)
+const server = require('http').createServer(app)
 const io = require('socket.io')(server)
 
 app.io = io
-// app.salons = []
 app.salons = {}
 require('./src/webSocket/indexSocket')({ io, salons: app.salons })
 require('./src/config/passport')(passport)

@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const salonClient = io('http://localhost:5000')
+const salonClient = io()
 const roomName = 'salonGeneral'
 const partieDisponible = document.querySelector('.partieDisponible')
 const lancerJeuForm = document.querySelector('.lancerJeuForm')
