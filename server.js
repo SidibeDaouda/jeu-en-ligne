@@ -5,14 +5,14 @@ const passport = require('passport')
 const flash = require('connect-flash')
 const session = require('express-session')
 const bodyParser = require('body-parser')
-const cors = require('cors')
+// const cors = require('cors')
 const mongoose = require('mongoose')
 
 const app = express()
 // const morgan = require('morgan')
 require('dotenv').config()
 
-app.use(cors())
+// app.use(cors())
 
 // Dev Logginf Middleware
 if (process.env.NODE_ENV === 'development') {
